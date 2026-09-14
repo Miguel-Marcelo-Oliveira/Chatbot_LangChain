@@ -54,7 +54,7 @@ python app/chatbot.py            # abre um menu:
 python app/context_rot.py        # demonstração de degradação de memória (context rot)
 ```
 
-> Rode os comandos a partir da raiz do projeto. `python app/chatbot.py`  
+> Rode os comandos a partir da raiz do projeto `python app/chatbot.py`  
 > Abre um **menu interativo** (você escolhe 1, 2 ou 3).
 
 ## Observação técnica — contagem de tokens
