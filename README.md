@@ -51,7 +51,7 @@ python app/chatbot.py           # abre um menu:
                                  #   1) demonstração automática (5 turnos) + extração estruturada
                                  #   2) chat interativo contínuo no terminal
                                  #   3) opção 1 seguida da opção 2
-python app/context_rot_demo.py  # demonstração de degradação de memória (context rot)
+python app/context_rot.py  # demonstração de degradação de memória (context rot)
 ```
 
 > Rode os comandos a partir da raiz do projeto. `python app/chatbot.py` abre um **menu interativo**
