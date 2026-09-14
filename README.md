@@ -45,20 +45,17 @@ começar — sem substituir professores, cursinhos ou material didático oficial
 ## Como executar (estado atual — terminal, sem Gradio ainda)
 
 ```bash
-cp .env.example .env            # edite com sua OLLAMA_API_KEY (este arquivo NÃO vai no .zip!)
+cp .env.example .env             # edite com sua OLLAMA_API_KEY 
 pip install -r requirements.txt
-python app/chatbot.py           # abre um menu:
+python app/chatbot.py            # abre um menu:
                                  #   1) demonstração automática (5 turnos) + extração estruturada
                                  #   2) chat interativo contínuo no terminal
                                  #   3) opção 1 seguida da opção 2
-python app/context_rot.py  # demonstração de degradação de memória (context rot)
+python app/context_rot.py        # demonstração de degradação de memória (context rot)
 ```
 
-> Rode os comandos a partir da raiz do projeto. `python app/chatbot.py` abre um **menu interativo**
-> (você escolhe 1, 2 ou 3) — não existe nenhuma flag de linha de comando como `--chat`.
-
-> **Antes da entrega:** este fluxo de terminal precisa ser substituído por `python -m app.main`
-> com interface Gradio (`http://localhost:7860`), conforme exigido pelo PDF do CKP01.
+> Rode os comandos a partir da raiz do projeto. `python app/chatbot.py`  
+> Abre um **menu interativo** (você escolhe 1, 2 ou 3).
 
 ## Observação técnica — contagem de tokens
 
