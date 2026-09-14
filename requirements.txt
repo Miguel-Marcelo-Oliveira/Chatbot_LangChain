@@ -1,0 +1,7 @@
+langchain
+langchain-core
+langchain-ollama
+langchain-classic
+pydantic
+python-dotenv
+tiktoken
