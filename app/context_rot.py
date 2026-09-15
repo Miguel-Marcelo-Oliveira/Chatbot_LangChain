@@ -43,8 +43,16 @@ def rodar_conversa(max_token_limit: int) -> str:
     )
     chat = ConversationChain(llm=llm, memory=memoria, prompt=PROMPT, verbose=False)
 
+    total_turnos = len(TURNOS)
     ultima_resposta = ""
-    for pergunta in TURNOS:
+    for indice, pergunta in enumerate(TURNOS, start=1):
+        # Mostra ao usuário, em tempo real, qual teste automático (turno) está
+        # sendo executado agora, já que cada chamada a chat.predict() pode
+        # demorar alguns segundos e a sequência roda sem intervenção manual.
+        print(
+            f"  [teste automático {indice}/{total_turnos} | limite={max_token_limit} tokens] "
+            f"enviando: \"{pergunta}\""
+        )
         ultima_resposta = chat.predict(input=pergunta)
     return ultima_resposta
 
